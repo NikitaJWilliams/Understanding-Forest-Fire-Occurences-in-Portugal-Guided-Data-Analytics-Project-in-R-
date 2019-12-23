@@ -1,0 +1,82 @@
+# These are the packages I used to execute the project
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(purrr)
+
+# On my computer the data file is stored under "downloads"
+setwd("~/Downloads")
+
+# The data comes from a scientific research paper on predicting the occurence forest fire in Portugal
+forest_fires <- read_csv("forestfires.csv")
+
+#Command to visualize data frame in tabular form
+View(forest_fires)
+
+#Order months in order
+forest_fires <- forest_fires%>%mutate(month = factor(month,levels = c("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec")))
+
+#Order days in order from Sunday to Saturday
+forest_fires <- forest_fires%>%mutate(day = factor(day,levels = c("sun","mon","tue","wed","thu","fri","sat")))
+
+#Construct a bar chart for months
+ggplot(data = forest_fires) + aes(x = month)+labs(x = "Month", y ="Total Fires", title = "Fires by Month")+theme(panel.background = element_rect(fill = "white"))+geom_bar()
+
+#Construct a bar chart for days of the week
+ggplot(data = forest_fires) + aes(x= day)+labs(x = "Day", y = "Total Fires", title = "Fires by Day of the Week") + theme(panel.background = element_rect(fill = "white"))+ geom_bar()
+
+#A custom function to create a boxplot
+create_boxplot <- function(x,y) {
+  ggplot(data = forest_fires) + 
+  aes_string(x = x, y = y) + 
+  theme(panel.background = element_rect(fill = "white")) + 
+  geom_boxplot()
+}
+
+#Assign the variable to "month"
+x_var1 = names(forest_fires)[3]
+#Assign the variable to "day"
+x_var2 = names(forest_fires)[4]
+#Assign the variable from "FFMC" to "rain"
+y_var = names(forest_fires)[5:12]
+
+#Create boxplots where "month" is the independent variable
+boxplot_monthly <- map2(x_var1,y_var,create_boxplot)
+#Create boxplots where "day" is the independent variable
+boxplot_daily <- map2(x_var2,y_var,create_boxplot)
+
+#Exhibit boxplots for months under "plots" in Rstudio
+boxplot_daily
+#Exhibit boxplots for days of week under "plots" in Rstudio 
+boxplot_monthly
+
+#A custom function to create a scatter plot
+create_scatter <- function (x,y)    {
+   ggplot(data = forest_fires) + 
+   aes_string(x = x, y = y) +
+   theme(panel.background = element_rect(fill = "white")) + 
+   geom_point(alpha = 0.3)
+}
+
+x_var3 <- names(forest_fires)[5:12]
+#Assign the variable to "area"
+y_var2 <- names(forest_fires)[13]
+
+
+scatter_area <- map2(x_var3,y_var2,create_scatter)
+#Exhibit scatter plots in Rstudio where area is the dependent variable
+scatter_area
+
+#Create a histogram for "area"
+ggplot(data = forest_fires) + aes(x = area) + labs (title = "Histogram of Area") + theme(panel.background = element_rect(fill = "white")) + geom_histogram()
+#A custom function to create scatter plot where the range of the dependent variable is restricted to values from 0 to 100
+create_scatter_lim <- function(x,y) {
+    ggplot(data = forest_fires) + 
+    aes_string(x = x, y = y) +
+    ylim(0,100)+
+    theme(panel.background = element_rect(fill = "white")) +
+    geom_boxplot(alpha = 0.3)
+    }
+scatter_area_lim <- map2(x_var3,y_var2,create_scatter_lim)
+#Exhibit scatter plots in Rstudio where area is the dependent variable and its range is restricted to values from 0 to 100
+scatter_area_lim
