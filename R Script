@@ -7,7 +7,7 @@ library(purrr)
 # On my computer the data file is stored under "downloads"
 setwd("~/Downloads")
 
-# The data comes from a scientific research paper on predicting the occurence forest fire in Portugal
+# The data comes from a scientific research paper on predicting the occurence of forest fire in Portugal
 forest_fires <- read_csv("forestfires.csv")
 
 #Command to visualize data frame in tabular form
