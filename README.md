@@ -1,1 +1,1 @@
-# Occurence-of-Forest-Fire-in-Portugal
+# Understanding Instances of Forest Fire in Portugal (Data Visualization Project)
