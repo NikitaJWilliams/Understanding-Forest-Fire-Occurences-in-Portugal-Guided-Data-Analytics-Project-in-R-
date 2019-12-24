@@ -76,7 +76,7 @@ create_scatter_lim <- function(x,y) {
     ylim(0,100)+
     theme(panel.background = element_rect(fill = "white")) +
     geom_boxplot(alpha = 0.3)
-    }
+}
 scatter_area_lim <- map2(x_var3,y_var2,create_scatter_lim)
 #Exhibit scatter plots in Rstudio where area is the dependent variable and its range is restricted to values from 0 to 100
 scatter_area_lim
