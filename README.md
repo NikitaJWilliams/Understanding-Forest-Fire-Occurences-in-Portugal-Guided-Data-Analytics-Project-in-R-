@@ -21,12 +21,12 @@ According to Cortez and Morais, forest fires inflict major harm on the environme
 
 You can learn more about the variables used in this dataset at [Natural Resources Canada](http://cwfis.cfs.nrcan.gc.ca/background/summary/fwi).
 ## Data Analysis
-To determine when forest fires occur the most in Portugal, I plotted two seperate bar charts: the first bar chart depicts frequency of forest fires for each month and the second bar chart demonstrates frequency of forest fires for each day of the week. 
+To determine when forest fires occur the most in Portugal, I plotted two separate bar charts: the first bar chart depicts frequency of forest fires for each month and the second bar chart demonstrates frequency of forest fires for each day of the week. 
 
 ![](https://i.ibb.co/g9dyVNW/Month-Bar-Chart.png)
 ![](https://i.ibb.co/85bfHyf/Day-Bar-Chart.png)
 
-In the case of Portugal, August and September are by far the most popular months when it comes to forest fire incidents. On the other hand forest fires happen more on weekends than they do on weekdays with the exception of Friday. The distribution of the number of forest fires has a larger spread across different months than it does across different days of the week which is arguably not surprising.
+In the case of Portugal, August and September are by far the most popular months when it comes to forest fire incidents. On the other hand, forest fires happen more on weekends than they do on weekdays with the exception of Friday. The distribution of the number of forest fires has a larger spread across different months than it does across different days of the week which is arguably not surprising.
 
 To determine potential causes of the temporal variation in the number of forest fires across different days and months, I made a series of boxplots to picture the distribution variables that relate to forest fires over time. If these variables fluctuate as time moves forward, then they may help us anticipate forest fires with a greater degree of accuracy. 
 
@@ -37,9 +37,9 @@ According to the above boxplots, the variables that relate to forest fires do no
 ### Month
 ![](https://i.ibb.co/zxL16wf/Boxplot-Monthly.png)
 
-The second class of boxplots tells a different story when *month* represents time: the distribution of variables, which display connection with forest fires, alter with time! Unlike in the first group of boxplots, the median and the size of the boxes differ substantially for each month; however, *rain* is an exception to this transformation. That being said *temp* and *DC* can explain the abnormal high frequency of forest fires in August and September in Portgual as these measures tend to be relatively steep towards the end of the summer. 
+The second class of boxplots tells a different story when *month* represents time: the distribution of variables, which display connection with forest fires, alter with time! Unlike in the first group of boxplots, the median and the size of the boxes differ substantially for each month; however, *rain* is an exception to this transformation. That being said *temp* and *DC* can explain the abnormal high frequency of forest fires in August and September in Portugal as these measures tend to be relatively steep towards the end of the summer. 
 
-Right now I would like to turn attention to measuring the intensity of forest fires. A popular assumption in the forest fire research is that *area* serves as a good indicator for severity of the fire. The intuition behind the assumption is that a major forest fire will cause damage over a larger land area. To test the validity of this argument, I made a scatter plot of *area* where *area* is the dependent variable and factors that relate to forest fires are independent variables.
+Right now, I would like to turn attention to measuring the intensity of forest fires. A popular assumption in the forest fire research is that *area* serves as a good indicator for severity of the fire. The intuition behind the assumption is that a major forest fire will cause damage over a larger land area. To test the validity of this argument, I made a scatter plot of *area* where *area* is the dependent variable and factors that relate to forest fires are independent variables.
 ### Scatter Plot of Area
 ![](https://i.ibb.co/9hMj4kZ/Scatter-Area.png) 
 
@@ -57,7 +57,7 @@ Given this piece of information, I modified the original set of scatter plots wh
 
 ![](https://i.ibb.co/wCwgCwk/Scatter-Plot-Area-0-to-100.png)
 
-The new scatter plots show that when we impose an upper bound limit of 100 on *area*, the general patter does not change: *area* values are centered around 0. Thus, there is no clear relationship between *area* and severity of the forest fires in Portugal.
+The new scatter plots show that when we impose an upper bound limit of 100 on *area*, the general pattern does not change: *area* values are centered around 0. Thus, there is no clear relationship between *area* and severity of the forest fires in Portugal.
 
 ## Code
 
@@ -81,7 +81,7 @@ create_scatter <- function (x,y)    {
 ```
 To view the rest of my code, you can access the *R Script* file.
 ## Conclusion
-My sample results show that forest fires are most likely to occur during the months of August and September in Portgual. High temperatures and dry conditions can explain as to why this is the case. While many people may believe that *area* is a good measure of forest fire intensity, I challenge its legitimacy using scatter plots. 
+My sample results show that forest fires are most likely to occur during the months of August and September in Portugal. High temperatures and dry conditions can explain as to why this is the case. While many people may believe that *area* is a good measure of forest fire intensity, I challenge its legitimacy using scatter plots. 
 
 ## References
 Cortez and Morais, *A Data Mining Approach to Predict Forest Fires using Meteorological Data*. [Link to research paper](http://www3.dsi.uminho.pt/pcortez/fires.pdf)
