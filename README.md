@@ -1,4 +1,4 @@
-# Understanding Forest Fire Occurrences in Portugal (Data Visualization Project)
+# Understanding Forest Fire Occurrences in Portugal (Guided Data Visualization Project)
 
 ## Introduction 
 According to Cortez and Morais, forest fires inflict major harm on the environment and economy. One way to minimize the economic and ecological damage caused by forest fires is to predict their occurrence. In this project, I apply various graphical tools in R to identify days of the week and months of the year which experience the greatest number of forest fires. Lastly, I test a common assumption that the forest fire area serves as a good measure of forest fire severity. The dataset that I use contains a sample of forest fires in Portugal. Cortez and Morais state that the natural phenomenon greatly affects the country. 
