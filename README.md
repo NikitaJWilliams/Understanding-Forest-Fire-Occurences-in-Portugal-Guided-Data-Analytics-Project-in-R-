@@ -37,7 +37,7 @@ According to the above boxplots, the variables that relate to forest fires do no
 ### Month
 ![](https://i.ibb.co/zxL16wf/Boxplot-Monthly.png)
 
-The second class of boxplots tells a different story when *month* represents time: the distribution of variables, which display connection with forest fires, alter with time! Unlike in the first group of boxplots, the median and the size of the boxes differ substantially for each month; however, *rain* is an exception to this transformation. That being said *temp* and *DC* can explain the abnormal high frequency of forest fires in August and September in Portugal as these measures tend to be relatively steep towards the end of the summer. 
+The second class of boxplots tells a different story when *month* represents time: the distribution of variables, which displays connection with forest fires, alter with time! Unlike in the first group of boxplots, the median and the size of the boxes differ substantially for each month; however, *rain* is an exception to this transformation. That being said *temp* and *DC* can explain the abnormal high frequency of forest fires in August and September in Portugal as these measures tend to be relatively steep towards the end of the summer. 
 
 Right now, I would like to turn attention to measuring the intensity of forest fires. A popular assumption in the forest fire research is that *area* serves as a good indicator for severity of the fire. The intuition behind the assumption is that a major forest fire will cause damage over a larger land area. To test the validity of this argument, I made a scatter plot of *area* where *area* is the dependent variable and factors that relate to forest fires are independent variables.
 ### Scatter Plot of Area
