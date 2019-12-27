@@ -79,7 +79,7 @@ create_scatter <- function (x,y)    {
    geom_point(alpha = 0.3)
 }
 ```
-To view the rest of my code, you can access the *R Script* file.
+To view the rest of my code, you can access the [R Script](https://github.com/SkyKnight9/Understanding-Forest-Fire-Occurences-in-Portugal-Guided-Data-Analytics-Project-in-R-/blob/master/R%20Script) file.
 ## Conclusion
 My sample results show that forest fires are most likely to occur during the months of August and September in Portugal. High temperatures and dry conditions can explain as to why this is the case. While many people may believe that *area* is a good measure of forest fire intensity, I challenge its legitimacy using scatter plots. 
 
